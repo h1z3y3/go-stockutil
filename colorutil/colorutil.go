@@ -11,7 +11,6 @@ import (
 	"github.com/ghetzel/go-stockutil/mathutil"
 	"github.com/ghetzel/go-stockutil/rxutil"
 	"github.com/ghetzel/go-stockutil/stringutil"
-	"k8s.io/apimachinery/pkg/util/json"
 )
 
 type adjustment int
@@ -46,10 +45,6 @@ type Color struct {
 
 func (self Color) IsZero() bool {
 	return self.r == 0 && self.g == 0 && self.b == 0 && self.a == 0
-}
-
-func (self Color) MarshalJSON() ([]byte, error) {
-	return json.Marshal(self.String())
 }
 
 func (self Color) String() string {

@@ -1,4 +1,4 @@
-module github.com/ghetzel/go-stockutil
+module github.com/h1z3y3/go-stockutil
 
 go 1.17
 
